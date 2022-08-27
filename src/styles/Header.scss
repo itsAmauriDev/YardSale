@@ -1,0 +1,89 @@
+@use "./vars" as *;
+
+.navbar {
+  height: 5.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+  box-shadow: 0px 2px 4px 0px #0000000c;
+  width: 100%;
+}
+
+.menu {
+  display: none;
+}
+
+.navbar__left {
+  display: flex;
+}
+
+.navbar__logo {
+  width: 14.3rem;
+}
+
+.navbar__menu {
+  display: flex;
+  margin-left: 5rem;
+}
+
+.navbar__menu li {
+  font-size: $md;
+  font-weight: bold;
+  list-style: none;
+  margin-right: 1rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.navbar__menu li:hover {
+  border-radius: 10px;
+  color: $hospital-green;
+  outline: 1px solid $hospital-green;
+}
+
+.navbar-link {
+  color: $very-light-pink;
+  text-decoration: none;
+}
+
+.navbar__right {
+  display: flex;
+}
+
+.navbar__user-account {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar__user-account a:first-child {
+  color: $black;
+  font-weight: 300;
+  font-size: $sm;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  margin-right: 3rem;
+}
+
+.flechita {
+  transform: rotate(90deg);
+  margin-left: 1rem;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .navbar__menu {
+    display: none;
+  }
+
+  .user-account {
+    display: none;
+  }
+}
