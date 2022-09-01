@@ -12,9 +12,7 @@ const MyOrders = () => {
             <p className='product-name'>6 articles</p>
           </div>
           <p className='product-price'>$ 120.00</p>
-          <a href=''>
-            <div className='path-icon'></div>
-          </a>
+          <a href='' className='path-icon'></a>
         </div>
 
         <div className='mini-card mini-card--total'>
@@ -23,9 +21,7 @@ const MyOrders = () => {
             <p className='product-name'>6 articles</p>
           </div>
           <p className='product-price'>$ 120.00</p>
-          <a href=''>
-            <div className='path-icon'></div>
-          </a>
+          <a href='' className='path-icon'></a>
         </div>
 
         <div className='mini-card mini-card--total'>
@@ -34,9 +30,7 @@ const MyOrders = () => {
             <p className='product-name'>6 articles</p>
           </div>
           <p className='product-price'>$ 120.00</p>
-          <a href=''>
-            <div className='path-icon'></div>
-          </a>
+          <a href='' className='path-icon'></a>
         </div>
 
         <div className='mini-card mini-card--total'>
@@ -45,9 +39,7 @@ const MyOrders = () => {
             <p className='product-name'>6 articles</p>
           </div>
           <p className='product-price'>$ 120.00</p>
-          <a href=''>
-            <div className='path-icon'></div>
-          </a>
+          <a href='' className='path-icon'></a>
         </div>
 
         <div className='mini-card mini-card--total'>
@@ -56,9 +48,7 @@ const MyOrders = () => {
             <p className='product-name'>6 articles</p>
           </div>
           <p className='product-price'>$ 120.00</p>
-          <a href=''>
-            <div className='path-icon'></div>
-          </a>
+          <a href='' className='path-icon'></a>
         </div>
       </div>
     </div>
