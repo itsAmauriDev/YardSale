@@ -1,16 +1,17 @@
 import React from "react";
-import "../styles/Header.scss";
+import "@styles/Header.scss";
+
+import logo from "@logos/logo_yard_sale.svg";
+import iconMenu from "@icons/icon_menu.svg";
+import flechita from "@icons/flechita.svg";
+import iconShoppingCart from "@icons/icon_shopping_cart_notification.svg";
 
 const Header = () => {
   return (
     <nav className='navbar'>
-      <img src='./assets/icons/icon_menu.svg' alt='menu' className='menu' />
+      <img src={iconMenu} alt='menu' className='menu' />
       <div className='navbar__left'>
-        <img
-          src='./assets/logos/logo_yard_sale.svg'
-          alt='logo'
-          className='navbar__logo'
-        />
+        <img src={logo} alt='logo' className='navbar__logo' />
         <ul className='navbar__menu'>
           <li>
             <a className='navbar-link' href='/'>
@@ -46,24 +47,17 @@ const Header = () => {
       </div>
       <div className='navbar__right'>
         <ul className='navbar__user-account'>
-          <a href=''>
-            <li className='user-account'>
-              camiayokoo@gmail.com
-              <img
-                className='flechita'
-                src='./assets/icons/flechita.svg'
-                alt=''
-              />
-            </li>
-          </a>
-          <a href=''>
-            <li>
-              <img
-                src='./assets/icons/icon_shopping_cart_notification.svg'
-                alt='shopping cart'
-              />
-            </li>
-          </a>
+          <li className='user-account'>
+            <a href=''>
+              <span>camiayokoo@gmail.com</span>
+              <img className='flechita' src={flechita} alt='' />
+            </a>
+          </li>
+          <li>
+            <a href=''>
+              <img src={iconShoppingCart} alt='shopping cart' />
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

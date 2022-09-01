@@ -1,0 +1,41 @@
+@use "@styles/vars" as *;
+
+.menu-desktop {
+  width: 15.3rem;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 #0000001f;
+  padding: 1.8rem;
+}
+.menu-desktop li {
+  list-style: none;
+  margin-bottom: 3rem;
+  text-align: right;
+}
+
+.menu-desktop li:last-child {
+  margin-bottom: 0.6rem;
+}
+
+.link-button {
+  color: $hospital-green;
+  font-size: $sm;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+.link-button--bold {
+  color: $black;
+  font-size: $md;
+  font-weight: bold;
+}
+
+.space-bar {
+  background-color: $text-input-field;
+  height: 1px;
+}

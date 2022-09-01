@@ -11,7 +11,7 @@ const NewPassword = () => {
           className='logo'
         />
         <h1 className='title'>Create a new password</h1>
-        <p className='subtitle'>Enter a new password htmlFor your account</p>
+        <p className='subtitle'>Enter a new password for your account</p>
         <form action='' className='form'>
           <label htmlFor='password' className='label'>
             Password

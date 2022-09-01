@@ -1,0 +1,54 @@
+@use "@styles/vars" as *;
+
+.menu {
+  height: 100vh;
+  width: 100%;
+  padding: 3.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.close-menu {
+  height: 12px;
+  width: 12px;
+  /* background-color: #c7c7c7; */
+  position: absolute;
+  right: 18px;
+  top: 21px;
+}
+
+.menu li {
+  list-style: none;
+  margin-bottom: 3.7rem;
+}
+
+.link-button {
+  color: $hospital-green;
+  font-size: $sm;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+.link-button--bold {
+  color: $black;
+  font-size: $md;
+}
+
+.space-bar {
+  background-color: $text-input-field;
+  height: 1px;
+}
+
+.menu__email p {
+  font-size: $sm;
+  font-weight: 300;
+  margin-bottom: 0.6rem;
+}
