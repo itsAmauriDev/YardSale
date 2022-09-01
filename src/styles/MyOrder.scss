@@ -16,6 +16,10 @@
 
     h1 {
       margin-bottom: 2.3rem;
+
+      @media (max-width: 640px) {
+        display: none;
+      }
     }
 
     .mini-card {
@@ -56,6 +60,12 @@
       }
     }
 
+    .mini-card--product {
+      @media (max-width: 640px) {
+        padding: 0 2rem;
+      }
+    }
+
     .mini-card--total {
       background-color: $text-input-field;
       padding: 0 2rem;
@@ -68,16 +78,4 @@
       }
     }
   }
-}
-
-@media (max-width: 640px) {
-  $width-container: 33.9rem;
-}
-
-.my-order-container h1 {
-  display: none;
-}
-
-.mini-card--product {
-  padding-right: 2rem;
 }
