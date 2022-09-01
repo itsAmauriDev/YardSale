@@ -6,36 +6,39 @@
   border-radius: 5px;
   box-shadow: 0 0 6px 0 #0000001f;
   padding: 1.8rem;
-}
-.menu-desktop li {
-  list-style: none;
-  margin-bottom: 3rem;
-  text-align: right;
-}
 
-.menu-desktop li:last-child {
-  margin-bottom: 0.6rem;
-}
+  ul {
+    li {
+      list-style: none;
+      margin-bottom: 3rem;
+      text-align: right;
 
-.link-button {
-  color: $hospital-green;
-  font-size: $sm;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-}
+      &:last-child {
+        margin-bottom: 0.6rem;
+      }
 
-.link-button:hover {
-  text-decoration: underline;
-}
+      .link-button {
+        color: $hospital-green;
+        font-size: $sm;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
 
-.link-button--bold {
-  color: $black;
-  font-size: $md;
-  font-weight: bold;
-}
+        &:hover {
+          text-decoration: underline;
+        }
+      }
 
-.space-bar {
-  background-color: $text-input-field;
-  height: 1px;
+      .link-button--bold {
+        color: $black;
+        font-size: $md;
+        font-weight: bold;
+      }
+
+      .space-bar {
+        background-color: $text-input-field;
+        height: 1px;
+      }
+    }
+  }
 }
