@@ -1,0 +1,45 @@
+@use "@styles/vars" as *;
+@use "@styles/mixins" as *;
+
+.order-checkout {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 2.4rem;
+
+  .mini-card {
+    @include mini-card;
+
+    .product-image {
+      @include product-image;
+
+      img {
+        @include product-image__img;
+      }
+    }
+
+    .product-price {
+      @include product-text-bold;
+    }
+  }
+
+  .mini-card--total {
+    @include mini-card--overview;
+    margin-bottom: 1.8rem;
+  }
+
+  div {
+    padding: 0 1rem;
+
+    .button {
+      @include button;
+    }
+
+    .button--primary {
+      @include button--primary;
+    }
+  }
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+}
