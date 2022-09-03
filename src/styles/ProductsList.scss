@@ -1,0 +1,15 @@
+@use "@styles/vars" as *;
+
+.main-container {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, $card-size);
+    place-content: center;
+    gap: 3rem 2.2rem;
+    padding: 3rem 0;
+
+    @media (max-width: 640px) {
+      grid-template-columns: repeat(auto-fill, 16.3rem);
+    }
+  }
+}

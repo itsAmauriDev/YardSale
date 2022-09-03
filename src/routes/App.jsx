@@ -8,13 +8,12 @@ import RecoveryPassword from "@containers/RecoveryPassword";
 import NewPassword from "@containers/NewPassword";
 
 import CreateAccount from "@pages/CreateAccount";
-import Home2 from "@pages/Home2";
+import ProductsList from "@containers/ProductsList";
 import MyAccount from "@pages/MyAccount";
 import MyOrders from "@pages/MyOrders";
 import ShoppingCart from "@pages/ShoppingCart";
 
 import "@styles/global.scss";
-import ProductDetails from "../containers/ProductDetails";
 
 export const App = () => {
   return (
@@ -30,11 +29,10 @@ export const App = () => {
           />
           <Route exact path='/new-password' element={<NewPassword />} />
           <Route exact path='/CreateAccount' element={<CreateAccount />} />
-          <Route exact path='/Home2' element={<Home2 />} />
+          <Route exact path='/Product' element={<ProductsList />} />
           <Route exact path='/MyAccount' element={<MyAccount />} />
           <Route exact path='/MyOrders' element={<MyOrders />} />
           <Route exact path='/ShoppingCart' element={<ShoppingCart />} />
-          <Route exact path='/Product' element={<ProductDetails />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Layout>

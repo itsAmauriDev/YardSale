@@ -1,6 +1,9 @@
 import React from "react";
 import "@styles/ProductItem.scss";
 
+import roundShelf from "@images/round-shelf.png";
+import addToCart from "@icons/bt_add_to_cart.svg";
+
 const ProductItem = () => {
   return (
     <div className='card'>
