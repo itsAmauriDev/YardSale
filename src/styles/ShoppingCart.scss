@@ -33,6 +33,7 @@
     }
 
     .mini-card {
+      width: $width-container;
       height: $card-size-small;
       display: grid;
       grid-template-columns: auto 1fr auto auto;

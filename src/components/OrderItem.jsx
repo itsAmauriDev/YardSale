@@ -1,6 +1,8 @@
 import React from "react";
 import "@styles/OrderItem.scss";
 
+import roundShelf from "@images/round-shelf.png";
+
 const OrderItem = () => {
   return (
     <div className='mini-card mini-card--product'>

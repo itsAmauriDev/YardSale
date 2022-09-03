@@ -10,7 +10,6 @@ import NewPassword from "@containers/NewPassword";
 import CreateAccount from "@pages/CreateAccount";
 import Home2 from "@pages/Home2";
 import MyAccount from "@pages/MyAccount";
-import MyOrder from "@pages/MyOrder";
 import MyOrders from "@pages/MyOrders";
 import ShoppingCart from "@pages/ShoppingCart";
 
@@ -32,7 +31,6 @@ export const App = () => {
           <Route exact path='/CreateAccount' element={<CreateAccount />} />
           <Route exact path='/Home2' element={<Home2 />} />
           <Route exact path='/MyAccount' element={<MyAccount />} />
-          <Route exact path='/MyOrder' element={<MyOrder />} />
           <Route exact path='/MyOrders' element={<MyOrders />} />
           <Route exact path='/ShoppingCart' element={<ShoppingCart />} />
           <Route path='*' element={<NotFound />} />
