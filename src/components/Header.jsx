@@ -9,7 +9,7 @@ import iconShoppingCart from "@icons/icon_shopping_cart_notification.svg";
 const Header = () => {
   return (
     <nav className='navbar'>
-      <img src={iconMenu} alt='menu' className='menu' />
+      <img src={iconMenu} alt='menu' className='menu-icon' />
       <div className='navbar__left'>
         <img src={logo} alt='logo' className='navbar__logo' />
         <ul className='navbar__menu'>
