@@ -4,7 +4,7 @@ import Home from "@pages/Home";
 import NotFound from "@pages/NotFound";
 import Layout from "@containers/Layout";
 import Login from "@pages/Login";
-import RecoveryPassword from "@pages/RecoveryPassword";
+import EmailSent from "@pages/EmailSent";
 import NewPassword from "@pages/NewPassword";
 
 import CreateAccount from "@pages/CreateAccount";
@@ -21,11 +21,7 @@ export const App = () => {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/login' element={<Login />} />
-          <Route
-            exact
-            path='/recovery-password'
-            element={<RecoveryPassword />}
-          />
+          <Route exact path='/email-sent' element={<EmailSent />} />
           <Route exact path='/new-password' element={<NewPassword />} />
           <Route exact path='/create-account' element={<CreateAccount />} />
           <Route exact path='/account' element={<MyAccount />} />
