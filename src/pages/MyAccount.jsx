@@ -3,8 +3,8 @@ import "@styles/MyAccount.scss";
 
 const MyAccount = () => {
   return (
-    <div className='login'>
-      <div className='form-container'>
+    <div className='my-account'>
+      <div className='my-account-container'>
         <h1 className='title'>My account</h1>
         <form action='' className='form'>
           <div className='form__info'>

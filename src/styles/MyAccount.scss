@@ -1,16 +1,11 @@
 @use "@styles/vars" as *;
+@use "@styles/mixins" as *;
 
-.login {
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  place-items: center;
+.my-account {
+  @include container;
 
-  .form-container {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    width: 37.5rem;
-    padding: 1.8rem;
+  &-container {
+    @include form-container;
 
     .title {
       font-size: $lg;
@@ -20,17 +15,14 @@
     }
 
     .form {
-      display: flex;
-      flex-direction: column;
+      @include form;
 
       .form__info {
         display: flex;
         flex-direction: column;
 
         .label {
-          font-size: $sm;
-          font-weight: bold;
-          margin-bottom: 0.6rem;
+          @include form__label;
         }
 
         .value {
@@ -42,18 +34,11 @@
       }
 
       .button {
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: $lg;
-        font-weight: bold;
-        height: 5.9rem;
-        width: 100%;
+        @include button;
       }
 
       .button--secondary {
-        border: 1px solid $hospital-green;
-        background-color: $white;
-        color: $hospital-green;
+        @include button--secondary;
         margin: 1.1rem 0 3rem;
 
         @media (max-width: 640px) {

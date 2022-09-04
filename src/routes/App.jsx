@@ -8,7 +8,6 @@ import RecoveryPassword from "@pages/RecoveryPassword";
 import NewPassword from "@pages/NewPassword";
 
 import CreateAccount from "@pages/CreateAccount";
-import ProductsList from "@containers/ProductsList";
 import MyAccount from "@pages/MyAccount";
 import MyOrders from "@pages/MyOrders";
 import ShoppingCart from "@pages/ShoppingCart";
@@ -29,8 +28,7 @@ export const App = () => {
           />
           <Route exact path='/new-password' element={<NewPassword />} />
           <Route exact path='/create-account' element={<CreateAccount />} />
-          <Route exact path='/Product' element={<ProductsList />} />
-          <Route exact path='/MyAccount' element={<MyAccount />} />
+          <Route exact path='/account' element={<MyAccount />} />
           <Route exact path='/MyOrders' element={<MyOrders />} />
           <Route exact path='/ShoppingCart' element={<ShoppingCart />} />
           <Route path='*' element={<NotFound />} />
