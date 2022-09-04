@@ -13,10 +13,10 @@
 }
 
 @mixin mini-card--overview {
-  background-color: $text-input-field;
   width: 100%;
   padding: 0 2rem;
   border-radius: 10px;
+  background-color: $text-input-field;
 
   @media (max-width: 425px) {
     width: 100vw;
@@ -24,11 +24,11 @@
 }
 
 @mixin product-image {
-  border-radius: 20px;
-  height: $card-size-small;
   width: $card-size-small;
-  overflow: hidden;
+  height: $card-size-small;
   margin-right: 1.7rem;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 @mixin product-image__img {
@@ -66,4 +66,58 @@
   border: none;
   background-color: $hospital-green;
   color: $white;
+}
+
+@mixin button--secondary {
+  border: 1px solid $hospital-green;
+  background-color: $white;
+  color: $hospital-green;
+}
+
+@mixin link-button {
+  margin-bottom: 3rem;
+  font-size: $sm;
+  text-align: center;
+  text-decoration: none;
+  color: $hospital-green;
+  cursor: pointer;
+}
+
+@mixin container {
+  width: 100%;
+  height: calc(100vh - 5.9rem);
+  display: grid;
+  place-items: center;
+}
+
+@mixin form-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 37.5rem;
+  padding: 1.8rem;
+
+  @media (max-width: 425px) {
+    width: 100vw;
+  }
+}
+
+@mixin form {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin form__label {
+  margin-bottom: 0.6rem;
+  font-size: $sm;
+  font-weight: bold;
+}
+
+@mixin form__input {
+  height: 4.2rem;
+  margin-bottom: 2.4rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: $md;
+  background-color: $text-input-field;
 }

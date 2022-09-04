@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "@pages/Home";
 import NotFound from "@pages/NotFound";
 import Layout from "@containers/Layout";
-import Login from "@containers/Login";
-import RecoveryPassword from "@containers/RecoveryPassword";
-import NewPassword from "@containers/NewPassword";
+import Login from "@pages/Login";
+import RecoveryPassword from "@pages/RecoveryPassword";
+import NewPassword from "@pages/NewPassword";
 
 import CreateAccount from "@pages/CreateAccount";
 import ProductsList from "@containers/ProductsList";
@@ -28,7 +28,7 @@ export const App = () => {
             element={<RecoveryPassword />}
           />
           <Route exact path='/new-password' element={<NewPassword />} />
-          <Route exact path='/CreateAccount' element={<CreateAccount />} />
+          <Route exact path='/create-account' element={<CreateAccount />} />
           <Route exact path='/Product' element={<ProductsList />} />
           <Route exact path='/MyAccount' element={<MyAccount />} />
           <Route exact path='/MyOrders' element={<MyOrders />} />

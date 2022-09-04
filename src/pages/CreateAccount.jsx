@@ -3,8 +3,8 @@ import "@styles/CreateAccount.scss";
 
 const CreateAccount = () => {
   return (
-    <div className='login'>
-      <div className='form-container'>
+    <div className='create-account'>
+      <div className='create-account-container'>
         <h1 className='title'>My account</h1>
         <form action='' className='form'>
           <div className='form__info'>
