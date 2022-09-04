@@ -1,16 +1,11 @@
-@use "./vars" as *;
+@use "@styles/vars" as *;
+@use "@styles/mixins" as *;
 
 .login {
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  place-items: center;
+  @include container;
 
-  .form-container {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    width: 37.5rem;
-    padding: 1.8rem;
+  .login-container {
+    @include form-container;
 
     .logo {
       width: 15rem;
@@ -24,66 +19,38 @@
     }
 
     .form {
-      display: flex;
-      flex-direction: column;
+      @include form;
 
       .label {
-        font-size: $sm;
-        font-weight: bold;
-        margin-bottom: 0.6rem;
+        @include form__label;
       }
 
       .input {
-        background-color: $text-input-field;
-        border: none;
-        border-radius: 8px;
-        height: 4.2rem;
-        font-size: $md;
-        padding: 0.6rem;
-        margin-bottom: 2.4rem;
+        @include form__input;
       }
 
       .button {
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: $lg;
-        font-weight: bold;
-        height: 5.9rem;
-        width: 100%;
+        @include button;
       }
 
       .button--primary {
-        border: none;
-        background-color: $hospital-green;
-        color: $white;
+        @include button--primary;
         margin: 1.8rem 0 3rem;
       }
     }
 
     .link-button {
-      color: $hospital-green;
-      font-size: $sm;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      margin-bottom: 3rem;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      @include link-button;
     }
 
     .button--secondary {
-      background-color: $white;
-      border: 1px solid $hospital-green;
-      color: $hospital-green;
+      @include button;
+      @include button--secondary;
       margin-top: 3rem;
+    }
 
-      @media (max-width: 640px) {
-        position: absolute;
-        bottom: 2.6rem;
-        width: 33.9rem;
-      }
+    @media (max-width: 640px) {
+      height: 100%;
     }
   }
 }

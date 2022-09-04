@@ -81,6 +81,10 @@
   text-decoration: none;
   color: $hospital-green;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 @mixin container {
