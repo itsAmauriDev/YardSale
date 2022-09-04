@@ -124,4 +124,8 @@
   border-radius: 8px;
   font-size: $md;
   background-color: $text-input-field;
+
+  &::placeholder {
+    opacity: 0.4;
+  }
 }
