@@ -1,55 +1,18 @@
 import React from "react";
+import OrderOverview from "@components/OrderOverview";
 import "@styles/MyOrders.scss";
 
 const MyOrders = () => {
   return (
-    <div className='my-order'>
-      <div className='my-order-container'>
+    <div className='my-orders'>
+      <div className='my-orders-container'>
         <h1>My orders</h1>
-        <div className='mini-card mini-card--total'>
-          <div className='total-description'>
-            <p className='product-price'>04.25.2021</p>
-            <p className='product-name'>6 articles</p>
-          </div>
-          <p className='product-price'>$ 120.00</p>
-          <a href='' className='path-icon'></a>
-        </div>
 
-        <div className='mini-card mini-card--total'>
-          <div className='total-description'>
-            <p className='product-price'>04.25.2021</p>
-            <p className='product-name'>6 articles</p>
-          </div>
-          <p className='product-price'>$ 120.00</p>
-          <a href='' className='path-icon'></a>
-        </div>
-
-        <div className='mini-card mini-card--total'>
-          <div className='total-description'>
-            <p className='product-price'>04.25.2021</p>
-            <p className='product-name'>6 articles</p>
-          </div>
-          <p className='product-price'>$ 120.00</p>
-          <a href='' className='path-icon'></a>
-        </div>
-
-        <div className='mini-card mini-card--total'>
-          <div className='total-description'>
-            <p className='product-price'>04.25.2021</p>
-            <p className='product-name'>6 articles</p>
-          </div>
-          <p className='product-price'>$ 120.00</p>
-          <a href='' className='path-icon'></a>
-        </div>
-
-        <div className='mini-card mini-card--total'>
-          <div className='total-description'>
-            <p className='product-price'>04.25.2021</p>
-            <p className='product-name'>6 articles</p>
-          </div>
-          <p className='product-price'>$ 120.00</p>
-          <a href='' className='path-icon'></a>
-        </div>
+        <OrderOverview />
+        <OrderOverview />
+        <OrderOverview />
+        <OrderOverview />
+        <OrderOverview />
       </div>
     </div>
   );

@@ -13,14 +13,9 @@
 }
 
 @mixin mini-card--overview {
-  width: 100%;
   padding: 0 2rem;
   border-radius: 10px;
   background-color: $text-input-field;
-
-  @media (max-width: 425px) {
-    width: 100vw;
-  }
 }
 
 @mixin product-image {

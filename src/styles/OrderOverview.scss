@@ -4,26 +4,12 @@
 .mini-card {
   @include mini-card;
 
-  .product-image {
-    @include product-image;
-
-    img {
-      @include product-image__img;
-    }
-  }
-
   .product-name {
     @include product-text;
   }
 
   .product-price {
     @include product-text-bold;
-  }
-}
-
-.mini-card--product {
-  @media (max-width: 640px) {
-    padding: 0 2rem;
   }
 }
 

@@ -30,7 +30,7 @@ export const App = () => {
           <Route exact path='/new-password' element={<NewPassword />} />
           <Route exact path='/create-account' element={<CreateAccount />} />
           <Route exact path='/account' element={<MyAccount />} />
-          <Route exact path='/MyOrders' element={<MyOrders />} />
+          <Route exact path='/my-orders' element={<MyOrders />} />
           <Route exact path='/ShoppingCart' element={<ShoppingCart />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
