@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "@styles/Header.scss";
+import MenuMobile from "@components/MenuMobile";
 
 import logo from "@logos/logo_yard_sale.svg";
 import iconMenu from "@icons/icon_menu.svg";
@@ -7,9 +8,20 @@ import flechita from "@icons/flechita.svg";
 import iconShoppingCart from "@icons/icon_shopping_cart_notification.svg";
 
 const Header = () => {
+  const [toggleMenuMobile, setToggleMenuMobile] = useState(false);
+
+  const handleMenuMobile = () => {
+    setToggleMenuMobile(!toggleMenuMobile);
+  };
+
   return (
     <nav className='navbar'>
-      <img src={iconMenu} alt='menu' className='menu-icon' />
+      <img
+        src={iconMenu}
+        alt='menu'
+        className='menu-icon'
+        onClick={handleMenuMobile}
+      />
       <div className='navbar__left'>
         <img src={logo} alt='logo' className='navbar__logo' />
         <ul className='navbar__menu'>
@@ -60,6 +72,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
+      {toggleMenuMobile && <MenuMobile />}
     </nav>
   );
 };

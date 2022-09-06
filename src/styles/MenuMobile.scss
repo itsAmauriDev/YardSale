@@ -1,13 +1,16 @@
 @use "@styles/vars" as *;
 
 .menu {
-  height: 100vh;
+  position: fixed;
+  top: 5.4rem;
+  left: 0;
+  height: calc(100vh - 5.4rem);
   width: 100%;
   padding: 3.9rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
+  background-color: $white;
 
   .close-menu {
     height: 12px;

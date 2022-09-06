@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "@styles/ProductItem.scss";
 
 import roundShelf from "@images/round-shelf.png";
 import addToCart from "@icons/bt_add_to_cart.svg";
 
 const ProductItem = () => {
+  const [cart, setCart] = useState([]);
+
+  const handleClick = () => {
+    setCart([]);
+  };
+
   return (
     <div className='card'>
       <figure className='product-image'>
@@ -19,6 +25,7 @@ const ProductItem = () => {
           src={addToCart}
           alt='Icon add to cart'
           className='icon-add-to-cart'
+          onClick={handleClick}
         />
       </div>
     </div>

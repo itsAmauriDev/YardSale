@@ -16,6 +16,16 @@ const ProductsList = () => {
         <ProductItem />
         <ProductItem />
         <ProductItem />
+
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
       </div>
     </section>
   );
