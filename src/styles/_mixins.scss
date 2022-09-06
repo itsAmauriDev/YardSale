@@ -1,15 +1,11 @@
 @use "@styles/vars" as *;
 
 @mixin mini-card {
-  width: $width-container;
+  width: 100%;
   height: $card-size-small;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-
-  @media (max-width: 425px) {
-    width: 100vw;
-  }
 }
 
 @mixin mini-card--overview {

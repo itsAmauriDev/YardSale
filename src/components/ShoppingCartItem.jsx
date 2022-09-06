@@ -1,6 +1,9 @@
 import React from "react";
 import "@styles/ShoppingCartItem.scss";
 
+import iconClose from "@icons/icon_close.png";
+import roundShelf from "@images/round-shelf.png";
+
 const ShoppingCartItem = () => {
   return (
     <div className='mini-card mini-card--product'>
