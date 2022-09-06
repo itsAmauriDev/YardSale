@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "@styles/Header.scss";
 import MenuMobile from "@components/MenuMobile";
+import MenuDesktop from "@components/MenuDesktop";
 
 import logo from "@logos/logo_yard_sale.svg";
 import iconMenu from "@icons/icon_menu.svg";
@@ -9,9 +10,14 @@ import iconShoppingCart from "@icons/icon_shopping_cart_notification.svg";
 
 const Header = () => {
   const [toggleMenuMobile, setToggleMenuMobile] = useState(false);
+  const [toggleMenuDesktop, setToggleMenuDesktop] = useState(false);
 
   const handleMenuMobile = () => {
-    setToggleMenuMobile(!toggleMenuMobile);
+    setToggleMenuMobile((prevToggleMenuMobile) => !prevToggleMenuMobile);
+  };
+
+  const handleMenuDesktop = () => {
+    setToggleMenuDesktop((prevToggleMenuDesktop) => !prevToggleMenuDesktop);
   };
 
   return (
@@ -59,11 +65,13 @@ const Header = () => {
       </div>
       <div className='navbar__right'>
         <ul className='navbar__user-account'>
-          <li className='user-account'>
-            <a href=''>
-              <span>camiayokoo@gmail.com</span>
-              <img className='flechita' src={flechita} alt='' />
-            </a>
+          <li className='user-account' onClick={handleMenuDesktop}>
+            <span>camiayokoo@gmail.com</span>
+            <img
+              className={`flechita ${toggleMenuDesktop && "flechita-down"}`}
+              src={flechita}
+              alt=''
+            />
           </li>
           <li>
             <a href=''>
@@ -73,6 +81,7 @@ const Header = () => {
         </ul>
       </div>
       {toggleMenuMobile && <MenuMobile />}
+      {toggleMenuDesktop && <MenuDesktop />}
     </nav>
   );
 };
