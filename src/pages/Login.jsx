@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
 import "@styles/Login.scss";
 
 import logo from "@logos/logo_yard_sale.svg";
 
 const Login = () => {
+  const form = useRef(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(form.current);
+    const data = {
+      email: formData.get("email"),
+      password: formData.get("password"),
+    };
+    console.log(data);
+  };
+
   return (
     <div className='login'>
       <div className='login-container'>
         <img src={logo} alt='logo' className='logo' />
-        <form action='' className='form'>
+        <form action='' className='form' ref={form}>
           <label htmlFor='email' className='label'>
             Email address
           </label>
@@ -33,6 +45,7 @@ const Login = () => {
             type='submit'
             value='Log in'
             className='button button--primary'
+            onClick={handleSubmit}
           />
         </form>
         <a href='/' className='link-button'>
