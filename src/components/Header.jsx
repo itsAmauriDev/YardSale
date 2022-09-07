@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import "@styles/Header.scss";
 import MenuMobile from "@components/MenuMobile";
 import MenuDesktop from "@components/MenuDesktop";
+import ShoppingCart from "@containers/ShoppingCart";
 import AppContext from "@context/AppContext";
 
 import logo from "@logos/logo_yard_sale.svg";
@@ -13,6 +14,7 @@ import iconCart from "@icons/icon_shopping_cart_notification.svg";
 const Header = () => {
   const [toggleMenuMobile, setToggleMenuMobile] = useState(false);
   const [toggleMenuDesktop, setToggleMenuDesktop] = useState(false);
+  const [toggleShoppingCart, setToggleShoppingCart] = useState(false);
   const {
     state: { cart },
   } = useContext(AppContext);
@@ -20,9 +22,11 @@ const Header = () => {
   const handleMenuMobile = () => {
     setToggleMenuMobile((prevToggleMenuMobile) => !prevToggleMenuMobile);
   };
-
   const handleMenuDesktop = () => {
     setToggleMenuDesktop((prevToggleMenuDesktop) => !prevToggleMenuDesktop);
+  };
+  const handleOrder = () => {
+    setToggleShoppingCart((prevToggleShoppingCart) => !prevToggleShoppingCart);
   };
 
   return (
@@ -78,7 +82,7 @@ const Header = () => {
               alt=''
             />
           </li>
-          <li className='shopping-cart'>
+          <li className='shopping-cart' onClick={handleOrder}>
             <img
               src={cart.length > 0 ? iconCart : iconCartEmpty}
               alt='shopping cart icon'
@@ -91,6 +95,7 @@ const Header = () => {
       </div>
       {toggleMenuMobile && <MenuMobile />}
       {toggleMenuDesktop && <MenuDesktop />}
+      {toggleShoppingCart && <ShoppingCart />}
     </nav>
   );
 };
