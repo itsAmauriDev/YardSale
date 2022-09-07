@@ -29,6 +29,13 @@
     &::-webkit-scrollbar-thumb {
       background: $very-light-pink;
       border-radius: 10px;
+      visibility: hidden;
+    }
+
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        visibility: visible;
+      }
     }
 
     h3 {

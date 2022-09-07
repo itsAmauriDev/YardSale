@@ -2,16 +2,15 @@ import React from "react";
 import "@styles/ShoppingCartItem.scss";
 
 import iconClose from "@icons/icon_close.png";
-import roundShelf from "@images/round-shelf.png";
 
-const ShoppingCartItem = () => {
+const ShoppingCartItem = ({ product: { title, price, images } }) => {
   return (
     <div className='mini-card mini-card--product'>
       <figure className='product-image'>
-        <img src={roundShelf} alt='Round shelf' />
+        <img src={images[0]} alt={title} />
       </figure>
-      <p className='product-name'>Round shelf</p>
-      <p className='product-price'>$ 120,00</p>
+      <p className='product-name'>{title}</p>
+      <p className='product-price'>${price}</p>
       <img src={iconClose} alt='icon close' />
     </div>
   );

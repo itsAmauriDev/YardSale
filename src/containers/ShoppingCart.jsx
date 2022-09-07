@@ -9,7 +9,7 @@ import flechita from "@icons/flechita.svg";
 
 const ShoppingCart = () => {
   const {
-    state: { cart },
+    state: { cart, total },
   } = useContext(AppContext);
 
   return (
@@ -19,15 +19,15 @@ const ShoppingCart = () => {
           <img src={flechita} alt='flechita atrás' />
           Shopping cart
         </h3>
-        {cart.map((product) => (
+        {cart.map((product, index) => (
           <ShoppingCartItem
             product={product}
-            key={`order-item-${product.id}`}
+            key={`order-item-${index}-${product.id}`}
           />
         ))}
       </div>
 
-      <OrderCheckout />
+      <OrderCheckout sum={total} />
     </aside>
   );
 };

@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const initialState = {
   cart: [],
+  total: 0,
 };
 
 const useInitialState = () => {
@@ -11,6 +12,7 @@ const useInitialState = () => {
     setState({
       ...state,
       cart: [...state.cart, payload],
+      total: state.total + payload.price,
     });
   };
 
