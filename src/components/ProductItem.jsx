@@ -1,25 +1,23 @@
 import React, { useState } from "react";
 import "@styles/ProductItem.scss";
 
-import roundShelf from "@images/round-shelf.png";
 import addToCart from "@icons/bt_add_to_cart.svg";
 
-const ProductItem = () => {
+const ProductItem = ({ product }) => {
   const [cart, setCart] = useState([]);
 
   const handleClick = () => {
     setCart([]);
   };
-
   return (
     <div className='card'>
       <figure className='product-image'>
-        <img src={roundShelf} alt='Round shelf' />
+        <img src={product.images[0]} alt={product.title} />
       </figure>
       <div className='product-description'>
         <div className='product-info'>
-          <p className='product-price'>$ 35,00</p>
-          <p className='product-name'>Round shelf</p>
+          <p className='product-price'>${product.price} </p>
+          <p className='product-name'>{product.title}</p>
         </div>
         <img
           src={addToCart}

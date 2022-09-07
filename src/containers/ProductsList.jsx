@@ -12,7 +12,7 @@ const ProductsList = () => {
     <section className='main-container'>
       <div className='products-container'>
         {products.map((product) => (
-          <ProductItem />
+          <ProductItem product={product} key={product.id} />
         ))}
       </div>
     </section>
