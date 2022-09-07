@@ -16,7 +16,16 @@ const useInitialState = () => {
     });
   };
 
-  return { state, addToCart };
+  const removeFromCart = (payload, indexValue) => {
+    const newArray = state.cart.filter((_, index) => index != indexValue);
+    setState({
+      ...state,
+      cart: [...newArray],
+      total: state.total - payload.price,
+    });
+  };
+
+  return { state, addToCart, removeFromCart };
 };
 
 export default useInitialState;

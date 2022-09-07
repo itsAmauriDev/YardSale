@@ -23,6 +23,7 @@ const ShoppingCart = () => {
           <ShoppingCartItem
             product={product}
             key={`order-item-${index}-${product.id}`}
+            indexValue={index}
           />
         ))}
       </div>
