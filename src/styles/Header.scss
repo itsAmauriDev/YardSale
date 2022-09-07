@@ -105,6 +105,24 @@
           display: none;
         }
       }
+
+      .shopping-cart {
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .cart-counter {
+          width: 10px;
+          position: absolute;
+          top: -1px;
+          right: 1px;
+          font-size: 0.9rem;
+          font-weight: 700;
+          text-align: center;
+        }
+      }
     }
   }
 }

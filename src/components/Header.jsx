@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "@styles/Header.scss";
 import MenuMobile from "@components/MenuMobile";
 import MenuDesktop from "@components/MenuDesktop";
+import AppContext from "@context/AppContext";
 
 import logo from "@logos/logo_yard_sale.svg";
 import iconMenu from "@icons/icon_menu.svg";
 import flechita from "@icons/flechita.svg";
-import iconShoppingCart from "@icons/icon_shopping_cart_notification.svg";
+import iconCartEmpty from "@icons/icon_shopping_cart.svg";
+import iconCart from "@icons/icon_shopping_cart_notification.svg";
 
 const Header = () => {
   const [toggleMenuMobile, setToggleMenuMobile] = useState(false);
   const [toggleMenuDesktop, setToggleMenuDesktop] = useState(false);
+  const {
+    state: { cart },
+  } = useContext(AppContext);
 
   const handleMenuMobile = () => {
     setToggleMenuMobile((prevToggleMenuMobile) => !prevToggleMenuMobile);
@@ -73,10 +78,14 @@ const Header = () => {
               alt=''
             />
           </li>
-          <li>
-            <a href=''>
-              <img src={iconShoppingCart} alt='shopping cart' />
-            </a>
+          <li className='shopping-cart'>
+            <img
+              src={cart.length > 0 ? iconCart : iconCartEmpty}
+              alt='shopping cart icon'
+            />
+            <div className='cart-counter'>
+              {cart.length > 0 ? cart.length : null}
+            </div>
           </li>
         </ul>
       </div>
