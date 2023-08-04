@@ -58,7 +58,7 @@ const MenuMobile = () => {
         </ul>
       </ul>
       <ul className='menu__email'>
-        <p>camilayokoo@gmail.com</p>
+        <p>clientefeliz@gmail.com</p>
         <p>
           <a className='link-button' href=''>
             Sign out
